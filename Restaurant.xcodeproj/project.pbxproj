@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		69DB23E42199EDB400E09256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23E32199EDB400E09256 /* AppDelegate.swift */; };
-		69DB23E62199EDB400E09256 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23E52199EDB400E09256 /* ViewController.swift */; };
 		69DB23E92199EDB400E09256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69DB23E72199EDB400E09256 /* Main.storyboard */; };
 		69DB23EB2199EDBB00E09256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69DB23EA2199EDBB00E09256 /* Assets.xcassets */; };
 		69DB23EE2199EDBB00E09256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69DB23EC2199EDBB00E09256 /* LaunchScreen.storyboard */; };
+		69DB23F62199F17200E09256 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23F52199F17200E09256 /* CategoryTableViewController.swift */; };
+		69DB23F82199F18F00E09256 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23F72199F18F00E09256 /* MenuTableViewController.swift */; };
+		69DB23FA2199F1A600E09256 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23F92199F1A600E09256 /* OrderTableViewController.swift */; };
+		69DB23FD2199F46400E09256 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23FC2199F46400E09256 /* MenuItemDetailViewController.swift */; };
+		69DB23FF2199F63200E09256 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB23FE2199F63200E09256 /* Models.swift */; };
+		69DB24042199FEB000E09256 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB24032199FEB000E09256 /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69DB23E02199EDB400E09256 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DB23E32199EDB400E09256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69DB23E52199EDB400E09256 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69DB23E82199EDB400E09256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69DB23EA2199EDBB00E09256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69DB23ED2199EDBB00E09256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69DB23EF2199EDBB00E09256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69DB23F52199F17200E09256 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		69DB23F72199F18F00E09256 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		69DB23F92199F1A600E09256 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		69DB23FC2199F46400E09256 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		69DB23FE2199F63200E09256 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		69DB24032199FEB000E09256 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,50 @@
 			isa = PBXGroup;
 			children = (
 				69DB23E32199EDB400E09256 /* AppDelegate.swift */,
-				69DB23E52199EDB400E09256 /* ViewController.swift */,
 				69DB23E72199EDB400E09256 /* Main.storyboard */,
+				69DB24002199FDF000E09256 /* Models */,
+				69DB23FB2199F1B800E09256 /* Controllers */,
 				69DB23EA2199EDBB00E09256 /* Assets.xcassets */,
 				69DB23EC2199EDBB00E09256 /* LaunchScreen.storyboard */,
 				69DB23EF2199EDBB00E09256 /* Info.plist */,
 			);
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		69DB23FB2199F1B800E09256 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69DB24022199FE8D00E09256 /* Network */,
+				69DB24012199FE6800E09256 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		69DB24002199FDF000E09256 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69DB23FE2199F63200E09256 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69DB24012199FE6800E09256 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69DB23F52199F17200E09256 /* CategoryTableViewController.swift */,
+				69DB23F72199F18F00E09256 /* MenuTableViewController.swift */,
+				69DB23F92199F1A600E09256 /* OrderTableViewController.swift */,
+				69DB23FC2199F46400E09256 /* MenuItemDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		69DB24022199FE8D00E09256 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				69DB24032199FEB000E09256 /* MenuController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69DB23E62199EDB400E09256 /* ViewController.swift in Sources */,
+				69DB23FD2199F46400E09256 /* MenuItemDetailViewController.swift in Sources */,
+				69DB24042199FEB000E09256 /* MenuController.swift in Sources */,
+				69DB23FA2199F1A600E09256 /* OrderTableViewController.swift in Sources */,
 				69DB23E42199EDB400E09256 /* AppDelegate.swift in Sources */,
+				69DB23FF2199F63200E09256 /* Models.swift in Sources */,
+				69DB23F62199F17200E09256 /* CategoryTableViewController.swift in Sources */,
+				69DB23F82199F18F00E09256 /* MenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
