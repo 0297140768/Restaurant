@@ -272,11 +272,11 @@
             </objects>
             <point key="canvasLocation" x="2521" y="480"/>
         </scene>
-        <!--Order-->
+        <!--You Order-->
         <scene sceneID="q5A-Ud-tLV">
             <objects>
                 <navigationController id="a2u-qC-Ciw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Order" id="wPt-KC-eJT"/>
+                    <tabBarItem key="tabBarItem" title="You Order" image="orderTB" id="wPt-KC-eJT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hv8-CG-dxn">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -293,7 +293,7 @@
         <scene sceneID="n3O-Ct-P1L">
             <objects>
                 <navigationController id="wlW-if-XnZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" id="4rc-0X-xwJ"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menuTB" id="4rc-0X-xwJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yMT-uE-jOF">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -327,5 +327,7 @@
     </scenes>
     <resources>
         <image name="Gray" width="100" height="100"/>
+        <image name="menuTB" width="23" height="23"/>
+        <image name="orderTB" width="23" height="23"/>
     </resources>
 </document>
