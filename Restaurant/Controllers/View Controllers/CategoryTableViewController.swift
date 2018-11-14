@@ -16,6 +16,10 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableFooterView = UIView()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         menuController.fetchCategories { categories in
             if let categories = categories {
                 self.updateUI(with: categories)
@@ -48,6 +52,10 @@ class CategoryTableViewController: UITableViewController {
         return categories.count
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt
+        indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCellIdentifier", for: indexPath)

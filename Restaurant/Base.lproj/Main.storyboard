@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="2566" y="-267"/>
         </scene>
-        <!--Menu Item Detail View Controller-->
+        <!--Your choice-->
         <scene sceneID="Q7G-re-qgv">
             <objects>
-                <viewController restorationIdentifier="menuItemId" id="knn-fE-C5k" customClass="MenuItemDetailViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="menuItemId" title="Your choice" id="knn-fE-C5k" customClass="MenuItemDetailViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyF-rS-Yio">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +294,7 @@
             <objects>
                 <navigationController id="wlW-if-XnZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" image="menuTB" id="4rc-0X-xwJ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yMT-uE-jOF">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

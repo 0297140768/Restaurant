@@ -18,6 +18,8 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableFooterView = UIView()
+        
         title = category.capitalized
         menuController.fetchMenuItems(forCategory: category)
         { (menuItems) in
