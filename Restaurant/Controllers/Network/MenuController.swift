@@ -7,8 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 class MenuController {
+
+    var order = Order() {
+        didSet {
+            NotificationCenter.default.post(name:
+                MenuController.orderUpdatedNotification, object: nil)
+        }
+    }
+    
     let baseURL = URL(string: "http://api.armenu.net:8090/")!
     
     func fetchCategories(completion: @escaping ([String]?) -> Void) {
@@ -93,4 +102,50 @@ class MenuController {
         }
         task.resume()
     }
+    
+    func fetchImage(url: URL, completion: @escaping (UIImage?) ->
+        Void) {
+        var strURL: String = url.absoluteString
+        strURL = strURL.replacingOccurrences(of: "http://localhost:8090/", with: baseURL.absoluteString)
+        guard let newURL = URL(string: strURL) else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: newURL) { (data,
+            response, error) in
+            if let data = data,
+                let image = UIImage(data: data) {
+                completion(image)
+            } else {
+                completion(nil)
+            }
+        }
+        task.resume()
+    }
+    
+    func loadOrder() {
+        let documentsDirectoryURL =
+            FileManager.default.urls(for: .documentDirectory,
+                                     in: .userDomainMask).first!
+        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
+        guard let data = try? Data(contentsOf: orderFileURL) else
+        { return }
+        order = (try? JSONDecoder().decode(Order.self, from:
+            data)) ?? Order(menuItems: [])
+    }
+    
+    func saveOrder() {
+        let documentsDirectoryURL =
+            FileManager.default.urls(for: .documentDirectory,
+                                     in: .userDomainMask).first!
+        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
+        
+        if let data = try? JSONEncoder().encode(order) {
+            try? data.write(to: orderFileURL)
+        }
+    }
+    
+    static let shared = MenuController()
+    
+    static let orderUpdatedNotification =
+        Notification.Name("MenuController.orderUpdated")
 }
